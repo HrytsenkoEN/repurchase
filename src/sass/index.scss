@@ -1,2 +1,23 @@
-@import './common';
-@import './example';
+@import './utils/variables';
+@import './base/reset';
+@import './base/common';
+@import './utils/mixins';
+
+@import './components/container';
+@import './components/btn';
+@import './components/section';
+@import './components/overlay';
+@import './components/modal';
+
+@import './layouts/header';
+@import './layouts/hero';
+@import './layouts/project';
+@import './layouts/social';
+@import './layouts/team';
+@import './layouts/clients';
+@import './layouts/feature';
+@import './layouts/work';
+@import './layouts/form';
+@import './layouts/statistic.scss';
+@import './layouts/footer';
+@import './layouts/_footer-form';

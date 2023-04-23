@@ -1,14 +1,865 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="uk">
   <head>
     <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Page title</title>
+    <title>Автовикуп</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Raleway:wght@700&family=Roboto:wght@400;500;700;900&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/modern-normalize/1.1.0/modern-normalize.min.css"
+    />
+    
     <link rel="stylesheet" href="./sass/index.scss" />
-    <script type="module" src="./index.js"></script>
+
   </head>
-  <body>
-    <!-- ❗️❗️❗️ Add partials like so for every page -->
-    <include src="./partials/example.html"></include>
+
+  <body class="page">
+    <div class="border-heder">
+      <header class="header">
+        <div class="container">
+          <nav class="navigation">
+            <div class="navigation__logo">
+              <a href="./" class="logo logo--black">
+                <span class="logo__web">Автовикуп</span>Баришівка
+              </a>
+            </div>
+            <ul class="menu list">
+              <li class="menu__item item">
+                <a
+                  href="./index.html"
+                  class="menu__link link menu__link-current"
+                  >Головна</a
+                >
+              </li>
+              <li class="menu__item item">
+                <a href="./partials/portfolio.html" class="menu__link link">Підготовка до продажу</a>
+              </li>
+              <li class="menu__item item">
+                <a href="" class="menu__link link">Контакти</a>
+              </li>
+            </ul>
+          </nav>
+          <ul class="connect list">
+            <li class="connect__item item" style="display: none;">
+              <a class="connect__link link" href="mailto:info@devstudio.com"
+                ><svg class="connect__icon" width="16" height="12">
+                  <use href="./images/icons.svg#envelope"></use>
+                </svg>
+                info@devstudio.com</a
+              >
+            </li>
+            <li class="connect__item item">
+              <a class="connect__link link" href="tel:+380636371175"
+                ><svg class="connect__icon" width="10" height="16">
+                  <use href="./images/icons.svg#smartphone"></use>
+                </svg>
+                +38 063 637 11 75</a
+              >
+            </li>
+          </ul>
+          <button type="button" class="menu__open-btn" data-menu-open>
+            <svg class="icon-open-btn" width="40" height="40">
+              <use href="./images/icons.svg#menu24px"></use>
+            </svg>
+          </button>
+          <div class="mob-menu is-hidden" data-menu>
+            <div class="container">
+              <button type="button" class="menu__close-btn" data-menu-close>
+                <svg class="icon-close-btn" width="40" height="40">
+                  <use href="./images/icons.svg#close24px"></use>
+                </svg>
+              </button>
+              <div class="mob-menu-top">
+                <ul class="mob-menu-list list">
+                  <li class="mob-menu__item item">
+                    <a
+                      href="./index.html"
+                      class="mob-menu__link link mob-menu__link-current"
+                      >Головна</a
+                    >
+                  </li>
+                  <li class="mob-menu__item item">
+                    <a href="./partials/portfolio.html" class="mob-menu__link link"
+                      >Підготовка</a
+                    >
+                  </li>
+                  <li class="mob-menu__item item">
+                    <a href="" class="mob-menu__link link">Контакти</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="mob-menu-bottom">
+                <ul class="mob-connect list">
+                  <li class="mob-connect__item item">
+                    <a class="mob-connect__tel link" href="tel:+38 063 637 11 75">
+                      +38 063 637 11 75</a
+                    >
+                  </li>
+                  <li class="mob-connect__item item" style="display: none;">
+                    <a
+                      class="mob-connect__mail link"
+                      href="mailto:info@devstudio.com"
+                    >
+                      info@devstudio.com</a
+                    >
+                  </li>
+                </ul>
+                <ul class="mob-soc list">
+                  <li class="mob-soc__item item">
+                    <a href="" class="mob-soc__link">instagram</a>
+                  </li>
+                  <li class="mob-soc__item item">
+                    <a href="" class="mob-soc__link">twitter</a>
+                  </li>
+                  <li class="mob-soc__item item">
+                    <a href="" class="mob-soc__link">facebook</a>
+                  </li>
+                  <li class="mob-soc__item item">
+                    <a href="" class="mob-soc__link">linkedin</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+      </header>
+    </div>
+    <main>
+      <section class="hero">
+        <h1 class="title">
+           ВІТАЄМО НА САЙТІ НАШОЇ КОМПАНІЇ!
+        </h1>
+        <p>Ми пропонуємо швидкий та безпечний викуп автомобілів від власників по всій країні.
+Ми гарантуємо кращу ціну на ринку та повну безпеку угоди.</p>
+        <button type="button" class="button" data-modal-open>
+          Замовити автовикуп
+        </button>
+      </section>
+      
+      <section class="section no-padding">
+        <div class="container">
+          <h2 hidden>Як це працює</h2>
+          <ul class="feature-list">
+            <li class="feature-list__element">
+              <div class="feature-list__bgd">
+                <picture>
+                  <source
+                  
+                  />
+                  <img src="./images/step1.jpg" alt="mobile phone" />
+                </picture>
+                <!-- <svg class="feature-list__icon">
+                  <use href="./images/icons.svg#antenna"></use>
+                </svg> -->
+              </div>
+              <h3 class="title">КРОК 1:</h3>
+              <p>
+                Ви залишаєте заявку на викуп через просту форму на сайті, або ж телефонуйте на будь-який з номерів чи замовте зворотній дзвінок. Експерт-оцінювач під час телефонної розмови поставить пару запитань щодо автомобіля.
+              </p>
+            </li>
+            <li class="feature-list__element">
+              <div class="feature-list__bgd">
+                <picture>
+                  <source
+                  
+                  />
+                  <img src="./images/step2.jpg" alt="mobile phone" />
+                </picture>
+                <!-- <svg class="feature-list__icon">
+                  <use href="./images/icons.svg#clock"></use>
+                </svg> -->
+              </div>
+              <h3 class="title">КРОК 2:</h3>
+              <p>
+                Експерт запитає у Вас марку, модель, рік випуску авто, 
+                а також попросить Вас надіслати фотографії 
+                транспортного засобу. Після чого буде озвучена попередня 
+                ціна. Таким чином буде здійснена онлайн-оцінка авто. 
+                Якщо ціна влаштує, Вам буде призначена зустріч в 
+                зручному для Вас місці.
+              </p>
+            </li>
+            <li class="feature-list__element">
+              <div class="feature-list__bgd">
+              <picture>
+                <source
+                  
+                  />
+                  <img src="./images/step3.jpg" alt="mobile phone" />
+                </picture>
+                <!-- <svg class="feature-list__icon">
+                  <use href="./images/icons.svg#diagram"></use>
+                </svg> -->
+              </div>
+              <h3 class="title">КРОК 3:</h3>
+              <p>
+                При зустрічі буде проведено детальний огляд машини і озвучена 
+                остаточна ціна. Якщо під час телефонної розмови Ви не 
+                приховали значних мінусів автомобіля – то остаточна ціна 
+                буде дуже близька до попередньо озвученої.
+              </p>
+            </li>
+            <li class="feature-list__element">
+              <div class="feature-list__bgd">
+                <picture>
+                  <source
+                    
+                    />
+                    <img src="./images/step4.jpg" alt="mobile phone" />
+                  </picture>
+              </div>
+              <h3 class="title">КРОК 4:</h3>
+              <p>
+                Далі – оформлення угоди у нотаріуса, потім необхідні 
+                процедури в сервісній центрі МВС і передача грошей. 
+                Таким чином протягом кількох годин Ви зможете продати 
+                автомобіль в Баришівці і отримати за нього гідні гроші.
+              </p>
+            </li>
+          </ul>
+        </div>
+      </section>
+     
+      <section class="section section-work">
+        <div class="container">
+          <h2 class="title work">Чим ми займаємося</h2>
+          <ul class="work-list">
+            <li class="work-list__element">
+              <picture>
+                <source
+                  srcset="
+                    ./images/carwork/vikup.jpg        1x,
+                    ./images/carwork/vikup.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/carwork/vikup.jpg" alt="algoritm" />
+              </picture>
+              <div class="work-list__text">
+                <h3 class="work-list__title">Терміновий викуп авто</h3>
+              </div>
+            </li>
+            <li class="work-list__element">
+              <picture>
+                <source
+                  srcset="
+                    ./images/carwork/diagnostika.jpg        1x,
+                    ./images/carwork/diagnostika.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/carwork/diagnostika.jpg" alt="mobile phone" />
+              </picture>
+              <div class="work-list__text">
+                <h3 class="work-list__title">Діагностика автомобіля</h3>
+              </div>
+            </li>
+            <li class="work-list__element">
+              <picture>
+                <source
+                  srcset="
+                    ./images/carwork/pidgotovka.jpg        1x,
+                    ./images/carwork/pidgotovka.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <img src="./images/carwork/pidgotovka.jpg" alt="tablet pc" />
+              </picture>
+              <div class="work-list__text">
+                <h3 class="work-list__title">Передпродажна підготовка</h3>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <section class="section bgc" style="display: none;">
+        <div class="container">
+          <h2 class="title team">Наша команда</h2>
+          <ul class="team-list">
+            <li class="team-list__element">
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/teamfoto1.jpg    1x,
+                    ./images/team/teamfoto1-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab/teamfoto1-tab.jpg    1x,
+                    ./images/team/tab/teamfoto1-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mob/teamfoto1-mob.jpg    1x,
+                    ./images/team/mob/teamfoto1-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <img src="./images/team/teamfoto1.jpg" alt="Ігор Дем'яненко" />
+              </picture>
+              <div class="team-list__item">
+                <h3 class="title team-list__name">Ігор Дем'яненко</h3>
+                <p class="team-list__text">Product Designer</p>
+                <ul class="soc list">
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="team-list__element">
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/teamfoto2.jpg    1x,
+                    ./images/team/teamfoto2-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab/teamfoto2-tab.jpg    1x,
+                    ./images/team/tab/teamfoto2-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mob/teamfoto2-mob.jpg    1x,
+                    ./images/team/mob/teamfoto2-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <img src="./images/team/teamfoto2.jpg" alt="Ольга Рєпіна" />
+              </picture>
+              <div class="team-list__item">
+                <h3 class="title team-list__name">Ольга Рєпіна</h3>
+                <p class="team-list__text">Frontend Developer</p>
+                <ul class="soc list">
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="team-list__element">
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/teamfoto3.jpg    1x,
+                    ./images/team/teamfoto3-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab/teamfoto3-tab.jpg    1x,
+                    ./images/team/tab/teamfoto3-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mob/teamfoto3-mob.jpg    1x,
+                    ./images/team/mob/teamfoto3-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <img src="./images/team/teamfoto3.jpg" alt="Микола Тарасов" />
+              </picture>
+              <div class="team-list__item">
+                <h3 class="title team-list__name">Микола Тарасов</h3>
+                <p class="team-list__text">Marketing</p>
+                <ul class="soc list">
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+            <li class="team-list__element">
+              <picture>
+                <source
+                  srcset="
+                    ./images/team/teamfoto4.jpg    1x,
+                    ./images/team/teamfoto4-2x.jpg 2x
+                  "
+                  media="(min-width: 1200px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/tab/teamfoto4-tab.jpg    1x,
+                    ./images/team/tab/teamfoto4-tab-2x.jpg 2x
+                  "
+                  media="(min-width: 768px)"
+                />
+                <source
+                  srcset="
+                    ./images/team/mob/teamfoto4-mob.jpg    1x,
+                    ./images/team/mob/teamfoto4-mob-2x.jpg 2x
+                  "
+                  media="(max-width: 480px)"
+                />
+                <img src="./images/team/teamfoto4.jpg" alt="Михайло Єрмаков" />
+              </picture>
+              <div class="team-list__item">
+                <h3 class="title team-list__name">Михайло Єрмаков</h3>
+                <p class="team-list__text">UI Designer</p>
+                <ul class="soc list">
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#twitter"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#facebook"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#linkedin"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </ul>
+        </div>
+      </section>
+      
+      <!-- statistic start -->
+      
+        <section class="section section-work">
+          <div class="container-fluid fact bg-dark my-5 py-5">
+      <div class="container-s">
+          <div class="row g-4">
+              <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.1s">
+                  <i class="fa fa-check fa-2x text-white mb-3"></i>
+                  <h2 class="text-white mb-2" data-toggle="counter-up">4</h2>
+                  <p class="text-white mb-0">Роки в темі</p>
+              </div>
+              <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.3s">
+                  <i class="fa fa-users-cog fa-2x text-white mb-3"></i>
+                  <h2 class="text-white mb-2" data-toggle="counter-up">6</h2>
+                  <p class="text-white mb-0">Експертів в команді</p>
+              </div>
+              <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.5s">
+                  <i class="fa fa-users fa-2x text-white mb-3"></i>
+                  <h2 class="text-white mb-2" data-toggle="counter-up">117</h2>
+                  <p class="text-white mb-0">Задоволених клієнтів</p>
+              </div>
+              <div class="col-md-6 col-lg-3 text-center wow fadeIn" data-wow-delay="0.7s">
+                  <i class="fa fa-car fa-2x text-white mb-3"></i>
+                  <h2 class="text-white mb-2" data-toggle="counter-up">146</h2>
+                  <p class="text-white mb-0">Проданих авто</p>
+              </div>
+          </div>
+      </div>
+  </div>
+            </section>
+    
+      <!-- statistic end -->
+
+      <!-- Section-form Start -->
+    <include src="./partials/section-form.html"></include>
+  <!-- Section-form End -->
+
+      
+      <!-- <section class="section">
+        <div class="container">
+          <h2 class="title clients">Постійні клієнти</h2>
+          <ul class="clients-list list">
+            <li class="item">
+              <a href="" class="btn-clients">
+                <svg class="btn-icon">
+                  <use href="./images/icons.svg#logo1"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="" class="btn-clients">
+                <svg class="btn-icon">
+                  <use href="./images/icons.svg#logo2"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="" class="btn-clients">
+                <svg class="btn-icon">
+                  <use href="./images/icons.svg#logo3"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="" class="btn-clients">
+                <svg class="btn-icon">
+                  <use href="./images/icons.svg#logo4"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="" class="btn-clients">
+                <svg class="btn-icon">
+                  <use href="./images/icons.svg#logo5"></use>
+                </svg>
+              </a>
+            </li>
+            <li class="item">
+              <a href="" class="btn-clients">
+                <svg class="btn-icon">
+                  <use href="./images/icons.svg#logo6"></use>
+                </svg>
+              </a>
+            </li>
+          </ul>
+        </div>
+      </section> -->
+      
+      <!-- <section class="section">
+        <div class="backdrop" data-modal>
+          <div class="container modal">
+            <button type="button" class="modal-close" data-modal-close>
+              <svg class="icon-close" width="30" height="30">
+                <use href="./images/icons.svg#close"></use>
+              </svg>
+            </button>
+            <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+            <form class="modal-form">
+              <div class="form-field">
+                <label for="name" class="form-lable">Ім'я</label>
+                <input class="form-input" type="text" name="name" id="name" />
+                <svg class="icon-modal" width="18" height="18">
+                  <use href="./images/icons.svg#personblack"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <label for="tel" class="form-lable">Телефон</label>
+                <input class="form-input" type="tel" name="tel" id="tel" />
+                <svg class="icon-modal" width="18" height="18">
+                  <use href="./images/icons.svg#phoneblack"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <label for="mail" class="form-lable">Пошта</label>
+                <input class="form-input" type="email" name="mail" id="mail" />
+                <svg class="icon-modal" width="18" height="18">
+                  <use href="./images/icons.svg#emailblack"></use>
+                </svg>
+              </div>
+              <div class="form-field">
+                <label for="comment" class="form-lable">Коментар</label>
+                <textarea
+                  class="comment"
+                  name="comment"
+                  id="comment"
+                  placeholder="Введіть текст"
+                >
+                </textarea>
+              </div>
+              <div class="form-field">
+                <label for="policy" class="label-checkbox">
+                  <input
+                    class="checkbox"
+                    type="checkbox"
+                    name="policy"
+                    id="policy"
+                  />
+                  <span class="icon-checkbox"> </span>Погоджуюся з розсилкою та
+                  приймаю
+                  <a href="" class="checkbox-link"> Умови договору</a></label
+                >
+              </div>
+              <button type="submit" class="button">Відправити</button>
+            </form>
+          </div>
+        </div>
+      </section> -->
+    
+    </main>
+    
+    <footer>
+      <div class="container">
+        <ul class="footer-section">
+          <div class="footer-item768">
+            <li class="footer-item">
+              <a href="./" class="logo logo--wite">
+                <span class="logo__web">Автовикуп</span>Баришівка
+              </a>
+              <address>
+                <ul class="footer-list">
+                  <li><p>
+                    <a
+                      class="contacts-address-link link"
+                      href="https://goo.gl/maps/Whi3kpQW1DZDu8uF7"
+                      target="_blank"
+                      rel="noopener noreferrer nofollow"
+                      >Баришвка, центр коло
+                      ларька<br />
+                      Київська обл.,
+                      07501</a
+                    >
+                  </p></li>
+                  <li style="display: none;">
+                    <a href="mailto:info@devstudio.com" class="info link"
+                      >info@devstudio.com</a
+                    >
+                  </li>
+                  <li>
+                    <a href="tel:+380961111111" class="info link"
+                      >+38 063 637 11 75</a
+                    >
+                  </li>
+                </ul>
+              </address>
+            </li>
+            <li class="footer-item">
+              <div class="footer-social">
+                <h3 class="footer-title">приєднуйтесь</h3>
+                <ul class="soc list">
+                  <li class="soc__item item">
+                    <a href="" class="soc__link soc__link--wite">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#instagram"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link soc__link--wite">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#icon-telegram1"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link soc__link--wite">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#icon-viber"></use>
+                      </svg>
+                    </a>
+                  </li>
+                  <li class="soc__item item">
+                    <a href="" class="soc__link soc__link--wite">
+                      <svg class="soc__icon">
+                        <use href="./images/icons.svg#icon-phone"></use>
+                      </svg>
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            </li>
+          </div>
+          <li class="footer-item">
+            <div class="footer-form">
+              <p class="footer-title">Підпишіться на розсилку</p>
+              <form class="footer-field">
+                <label for="footer-input"></label>
+                <input
+                  class="footer-input"
+                  type="email"
+                  placeholder="E-mail"
+                  id="footer-input"
+                  name="footer-input"
+                />
+                <button type="submit" class="button">
+                  Підписатися
+                  <svg class="icon-footer" width="24" height="24">
+                    <use href="./images/icons.svg#iconsend"></use>
+                  </svg>
+                </button>
+              </form>
+            </div>
+          </li>
+        </ul>
+      </div>
+      
+      <div class="container">
+        <div class="copyright">
+          <div class="row">
+            
+              &copy;
+              <a
+                class="border-bottom"
+                href="#"
+                >Автовикуп Баришівка</a
+              >, All Right Reserved.2023
+
+              Designed By
+              <a
+                class="border-bottom"
+                href="https://www.linkedin.com/in/yevhen-hrytsenko-85085796/" 
+                rel="noopener noreferrer nofollow" 
+                target="_blank"
+                >HrytsenkoEN</a
+              >
+            
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <!--- MODAL --------------->
+
+    <div class="backdrop is-hidden" data-modal>
+      <div class="modal">
+        <button type="button" class="modal-close" data-modal-close>
+          <svg class="icon-close" width="30" height="30">
+            <use href="./images/icons.svg#close"></use>
+          </svg>
+        </button>
+        <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+        <form class="modal-form">
+          <div class="form-field">
+            <label for="name" class="form-lable">Ім'я</label>
+            <input class="form-input" type="text" name="name" id="name" />
+            <svg class="icon-modal" width="18" height="18">
+              <use href="./images/icons.svg#personblack"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label for="tel" class="form-lable">Телефон</label>
+            <input class="form-input" type="tel" name="tel" id="tel" />
+            <svg class="icon-modal" width="18" height="18">
+              <use href="./images/icons.svg#phoneblack"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label for="mail" class="form-lable">Пошта</label>
+            <input class="form-input" type="email" name="mail" id="mail" />
+            <svg class="icon-modal" width="18" height="18">
+              <use href="./images/icons.svg#emailblack"></use>
+            </svg>
+          </div>
+          <div class="form-field">
+            <label for="comment" class="form-lable">Коментар</label>
+            <textarea
+              class="comment"
+              name="comment"
+              id="comment"
+              placeholder="Введіть текст"
+            >
+            </textarea>
+          </div>
+          <div class="form-field">
+            <label for="policy" class="label-checkbox">
+              <input
+                class="checkbox"
+                type="checkbox"
+                name="policy"
+                id="policy"
+              />
+              <span class="icon-checkbox"> </span>Погоджуюся з розсилкою та
+              приймаю
+              <a href="" class="checkbox-link"> Умови договору</a></label
+            >
+          </div>
+          <button type="submit" class="button">Відправити</button>
+        </form>
+      </div>
+    </div>
+    
+    <script src="index.js"></script>
+    <script src="./js/modal.js"></script>
+    <script src="./js/menu.js"></script>
   </body>
 </html>

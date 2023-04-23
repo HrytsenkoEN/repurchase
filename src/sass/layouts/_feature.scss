@@ -1,0 +1,40 @@
+.feature-list {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 30px;
+}
+
+.feature-list .title {
+  @include font(700, 14px, 1.14, null);
+}
+
+.feature-list__bgd {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 120px;
+  width: 100%;
+  margin-bottom: 30px;
+  background-color: var(--button-bg-color);
+}
+
+.feature-list__icon {
+  height: 70px;
+  width: 70px;
+}
+
+.feature-list__element {
+  margin-bottom: 30px;
+  &:nth-child(4n) {
+    margin-right: 0;
+    margin-bottom: 0;
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 90px) / 4);
+    margin-bottom: 0;
+  }
+}

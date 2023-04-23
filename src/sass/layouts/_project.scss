@@ -1,0 +1,47 @@
+.project-item {
+  padding-top: 20px;
+  padding-right: 24px;
+  padding-bottom: 20px;
+  padding-left: 24px;
+}
+
+.projects-list .title {
+  margin-top: 0;
+  margin-bottom: 4px;
+  @include font(700, 18px, 2, null);
+  color: var(--title-text-color);
+}
+
+.projects-list .text {
+  margin-top: 0;
+  margin-bottom: 0;
+  @include font(400, 16px, 1.87, null);
+}
+
+.project-element {
+  width: 100%;
+  border: 1px solid #eeeeee;
+  cursor: pointer;
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  &:hover,
+  &:focus {
+    box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
+      1px 4px 6px rgba(0, 0, 0, 0.16);
+  }
+  @media screen and (min-width: 768px) {
+    width: calc((100% - 30px) / 2);
+  }
+  @media screen and (min-width: 1200px) {
+    width: calc((100% - 60px) / 3);
+  }
+}
+
+.project-overlay {
+  position: relative;
+  overflow: hidden;
+}
+
+.btn-list .item + .item {
+  margin-left: 8px;
+  margin-bottom: 20px;
+}

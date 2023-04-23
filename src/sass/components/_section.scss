@@ -1,0 +1,55 @@
+.section {
+  padding-top: 60px;
+  padding-bottom: 60px;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 94px;
+  }
+}
+
+.section.no-padding {
+  padding-bottom: 30;
+  @media screen and (min-width: 1200px) {
+    padding-top: 94px;
+    padding-bottom: 0px;
+  }
+}
+
+.section .title {
+  text-align: center;
+  margin-top: 0;
+  margin-bottom: 10px;
+  color: var(--title-text-color);
+  @media screen and (min-width: 1200px) {
+    text-align: left;
+  }
+}
+
+.section .work,
+.section .team,
+.section .clients {
+  @include font(700, 28px, 1.16, null);
+  text-align: center;
+  margin-bottom: 50px;
+  @media screen and (min-width: 1200px) {
+    @include font(700, 36px, 1.16, null);
+    text-align: center;
+    margin-bottom: 50px;
+  }
+}
+
+.section-project {
+  margin-left: auto;
+  margin-right: auto;
+  @media screen and (min-width: 480px) {
+    width: 450px;
+  }
+  @media screen and (min-width: 768px) {
+    width: 738px;
+  }
+  @media screen and (min-width: 1200px) {
+    width: 1170px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+}
