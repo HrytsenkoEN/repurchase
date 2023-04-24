@@ -23,16 +23,14 @@
 .team-list,
 .footer-list,
 .clients-list,
-.footer-section,
-.form-list {
+.footer-section {
   padding: 0;
   margin: 0;
   list-style: none;
 }
 
 .team-list,
-.projects-list,
-.form-list {
+.projects-list {
   display: flex;
   flex-wrap: wrap;
   gap: 30px;

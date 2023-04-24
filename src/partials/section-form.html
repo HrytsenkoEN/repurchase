@@ -27,92 +27,53 @@
         </div>
       </li>
       <li class="form-list__element">
-        <div class="form-item">
-          <h2 class="title">
-            форма швидкого продажу авто
-          </h2>
-          <form
-            class="modal-form"
-            action=""
-            method="post"
-          >
-            <div class="row g-3">
-              <div class="form-field">
-                <input
-                  type="text"
-                  class="form-control border-0"
-                  name="name"
-                  placeholder="Ваше ім'я"
-                  style="height: 55px"
-                />
-              </div>
-              <div class="form-field">
-                <input
-                  type="phome"
-                  class="form-control border-0"
-                  name="phone"
-                  placeholder="телефон"
-                  style="height: 55px"
-                />
-              </div>
-              <div class="form-field">
-                <input
-                  type="text"
-                  class="form-control border-0"
-                  name="car_make"
-                  placeholder="рік випуску"
-                  style="height: 55px"
-                />
-              </div>
-              <div class="form-field">
-                <div
-                  class="text"
-                  data-target-input="nearest"
-                >
-                  <select
-                    name="car_model"
-                    class="form-select border-0"
-                    style="height: 55px"
-                  >
-                    <option selected>
-                      В якому стані
-                    </option>
-                    <option
-                      value="Доглянуте авто"
-                    >
-                      Доглянуте авто
-                    </option>
-                    <option
-                      value="Робочий кінь"
-                    >
-                      Робочий кінь
-                    </option>
-                    <option
-                      value="На колінах"
-                    >
-                      На колінах
-                    </option>
-                  </select>
-                </div>
-              </div>
-              <div class="form-field">
-                <textarea
-                  class="form-control border-0"
-                  name="car_info"
-                  placeholder="Опишіть коротко про авто"
-                ></textarea>
-              </div>
-              <!-- потрібно завантаження фото -->
-              <div class="form-field">
-                <button
-                  class="button"
-                  name="submitButton"
-                  type="submit"
-                >
-                  продати ласточку
-                </button>
-              </div>
+
+        <div class="form-content form-item">
+          <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+          <form class="modal-form">
+            <div class="form-field">
+              <label for="name" class="form-lable">Телефон</label>
+              <input class="form-input" type="tel" name="tel" id="tel" />
+              <svg class="icon-modal" width="18" height="18">
+                <use href="./images/icons.svg#phoneblack"></use>
+              </svg>
             </div>
+            <div class="form-field">
+              <label for="tel" class="form-lable">Марка</label>
+              <input class="form-input" type="brand" name="brand" id="brand" />
+              <svg class="icon-modal" width="18" height="18">
+                <use href="./images/icons.svg#icon-travel-car"></use>
+              </svg>
+            </div>
+            <div class="form-field">
+              <label for="mail" class="form-lable">Модель</label>
+              <input class="form-input" type="momdel" name="momdel" id="momdel" />
+              <svg class="icon-modal" width="18" height="18">
+                <use href="./images/icons.svg#icon-key"></use>
+              </svg>
+            </div>
+            <div class="form-field">
+              <label for="mail" class="form-lable">Ціна</label>
+              <input class="form-input" type="price" name="price" id="price" />
+              <svg class="icon-modal" width="18" height="18">
+                <use href="./images/icons.svg#icon-currency-dollar"></use>
+              </svg>
+            </div>
+            <div class="form-field">
+              <label for="comment" class="form-lable">Коментар</label>
+              <textarea
+                class="comment"
+                name="comment"
+                id="comment"
+                placeholder="Краще скажіть правду.."
+              >
+              </textarea>
+            </div>
+            <div class="form-field">
+            <span class="text">Прикріпити фото автомобіля</span>
+
+            </div>
+            <button type="submit" class="button">Продати ласточку</button>
           </form>
         </div>
       </li>

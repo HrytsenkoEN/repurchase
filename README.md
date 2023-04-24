@@ -48,3 +48,65 @@
     сторінка "Автосалон"
 
     футер бордер
+    
+    
+    ======================================
+
+
+Створіть телеграму бота і отримайте токен API.
+
+Підключіть достатньо бібліотеки, наприклад, axios і querystring.
+
+Напишіть функцію, яка відправляє повідомлення в телеграм бота. Функція повинна виконувати наступні кроки:
+
+Створити об'єкт з даними, які були введені у форму.
+Серіалізуйте цей об'єкт у рядок запиту за допомогою querystring.
+Створіть конфігурацію для запиту axios, включаючи API токенів, ідентифікатор чату, телеграму бота та повідомлення для відправки.
+Виконати запит axios.post()з цією конфігурацією.
+Ось код функції:
+
+const axios = require('axios');
+const querystring = require('querystring');
+
+const telegramBotToken = '512482013:AAEMy-W7LTkZNmM95H0yVHKSSVq1Fvt76D8';
+const telegramChatId = '-972517118';
+
+async function sendTelegramMessage(formData) {
+  const message = `Нове повідомлення від ${formData.name} (${formData.email}):\n\n${formData.message}`;
+
+  const query = querystring.stringify({
+    chat_id: telegramChatId,
+    text: message
+  });
+
+  const config = {
+    headers: {
+      'Content-Type': 'application/x-www-form-urlencoded'
+    }
+  };
+
+  const url = `https://api.telegram.org/bot${telegramBotToken}/sendMessage`;
+
+  await axios.post(url, query, config);
+}
+
+Додайте обробник подій у форму, яка не виконує функції sendTelegramMessage()при поданні форми. Ось приклад коду:
+
+const form = document.getElementById('my-form');
+
+form.addEventListener('submit', async (event) => {
+  event.preventDefault();
+
+  const formData = new FormData(form);
+
+  await sendTelegramMessage({
+    name: formData.get('name'),
+    email: formData.get('email'),
+    message: formData.get('message')
+  });
+
+  form.reset();
+});
+
+
+Цей алгоритм використовується axiosдля виконання запитів HTTP до API телеграми. Якщо вам зручно використовувати іншу бібліотеку, наприклад, fetch, вам потрібно буде адаптувати код функції `sendTelegram
