@@ -1,17 +1,14 @@
-// import throttle from 'lodash.throttle';
-// const TelegramBot = require('node-telegram-bot-api');
+import { Notify } from 'notiflix';
 const token = '512482013:AAEMy-W7LTkZNmM95H0yVHKSSVq1Fvt76D8';
-// const bot = new TelegramBot(token, { polling: true });
 const formEl = document.querySelector('.modal-form');
 import axios from 'axios';
-// const querystring = require('querystring');
 const chatId = '-972517118';
 const urlApi = `https://api.telegram.org/bot${ token }/sendMessage`;
 // const formData = {};
 
 // updateForm();
 
-// formEl.addEventListener('input', throttle(onFormInput, 500));
+formEl.addEventListener('.form-input', throttle(onFormInput, 500));
 formEl.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
@@ -21,8 +18,8 @@ function onFormSubmit(e) {
       message += `телефон: ${ this.name.value }\n`;
       message += `машина: ${ this.brand.value }\n`;
       message += `модель:  ${ this.model.value }\n`;
-      message += `ціна:  ${ this.model.value }\n`;
-      message += `коментар:  ${ this.model.value }\n`;
+      message += `ціна:  ${ this.price.value }\n`;
+      message += `коментар:  ${ this.comment.value }\n`;
 
 
 
@@ -31,7 +28,31 @@ function onFormSubmit(e) {
         parce_mode: 'html',
         text: message
       })
-
+          .then((res) => {
+            this.name.value = '';
+            this.brand.value = '';
+            this.model.value = '';
+            this.price.value = '';
+            this.comment.value = '';
+          })
+          .catch((err) => {
+            if (tel.value === '' || 
+            brand.value === ''  || 
+            momdel.value === ''  || 
+            price.value === '') {
+              return Notify.failure(
+                'Заповни всі поля!'
+              );}
+          })
+          .finally(() => {
+            console.log({ 
+              tel: tel.value, 
+              brand: brand.value, 
+              momdel: momdel.value, 
+              price: price.value, 
+              comment: comment.value });
+              evt.target.reset();
+          })
 }
 
 
