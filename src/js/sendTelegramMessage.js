@@ -1,21 +1,23 @@
 import { Notify } from 'notiflix';
-const token = '512482013:AAEMy-W7LTkZNmM95H0yVHKSSVq1Fvt76D8';
-const formEl = document.querySelector('.modal-form');
 import axios from 'axios';
-const chatId = '-972517118';
+const formEl = document.querySelector('.modal-form');
+const token = '6196909571:AAFOZjAec4WPyliZ5CIK6GSVnGy1XA06-dM';
+const chatId = '-980921121';
+// const token = '512482013:AAEMy-W7LTkZNmM95H0yVHKSSVq1Fvt76D8';
+// const chatId = '-972517118';
 const urlApi = `https://api.telegram.org/bot${ token }/sendMessage`;
 // const formData = {};
 
 // updateForm();
 
-formEl.addEventListener('.form-input', throttle(onFormInput, 500));
+// formEl.addEventListener('.form-input', throttle(onFormInput, 500));
 formEl.addEventListener('submit', onFormSubmit);
 
 function onFormSubmit(e) {
       e.preventDefault();
       
       let message = `Нашли жертву\n`;
-      message += `телефон: ${ this.name.value }\n`;
+      message += `телефон: ${ this.tel.value }\n`;
       message += `машина: ${ this.brand.value }\n`;
       message += `модель:  ${ this.model.value }\n`;
       message += `ціна:  ${ this.price.value }\n`;
@@ -29,7 +31,7 @@ function onFormSubmit(e) {
         text: message
       })
           .then((res) => {
-            this.name.value = '';
+            this.tel.value = '';
             this.brand.value = '';
             this.model.value = '';
             this.price.value = '';
@@ -38,7 +40,7 @@ function onFormSubmit(e) {
           .catch((err) => {
             if (tel.value === '' || 
             brand.value === ''  || 
-            momdel.value === ''  || 
+            model.value === ''  || 
             price.value === '') {
               return Notify.failure(
                 'Заповни всі поля!'
@@ -48,7 +50,7 @@ function onFormSubmit(e) {
             console.log({ 
               tel: tel.value, 
               brand: brand.value, 
-              momdel: momdel.value, 
+              model: model.value, 
               price: price.value, 
               comment: comment.value });
               evt.target.reset();

@@ -1,0 +1,63 @@
+<div class="backdrop is-hidden" data-modal>
+  <div class="modal">
+    <button type="button" class="modal-close" data-modal-close>
+      <svg class="icon-close" width="30" height="30">
+        <use href="./images/icons.svg#close"></use>
+      </svg>
+    </button>
+    <p class="modal-title">Залиште свої дані, ми вам передзвонимо</p>
+    <form class="modal-form">
+      <div class="form-field">
+        <label for="name" class="form-lable">Телефон</label>
+        <input class="form-input" type="tel" name="tel" id="tel" />
+        <svg class="icon-modal" width="30" height="30">
+          <use
+            y="15%"
+            width="20"
+            height="20"
+            href="./images/icons.svg#phoneblack"
+          ></use>
+        </svg>
+      </div>
+      <div class="form-field">
+        <label for="tel" class="form-lable">Марка</label>
+        <input class="form-input" type="brand" name="brand" id="brand" />
+
+        <svg class="icon-modal" width="30" height="30">
+          <use x="5%" y="15%" href="./images/icons.svg#icon-travel-car"></use>
+        </svg>
+      </div>
+      <div class="form-field">
+        <label for="mail" class="form-lable">Модель</label>
+        <input class="form-input" type="model" name="model" id="model" />
+        <svg class="icon-modal" width="30" height="30">
+          <use x="5%" y="15%" href="./images/icons.svg#icon-key"></use>
+        </svg>
+      </div>
+      <div class="form-field">
+        <label for="mail" class="form-lable">Ціна</label>
+        <input class="form-input" type="price" name="price" id="price" />
+        <svg class="icon-modal" width="30" height="30">
+          <use
+            x="5%"
+            y="15%"
+            href="./images/icons.svg#icon-currency-dollar"
+          ></use>
+        </svg>
+      </div>
+      <div class="form-field">
+        <label for="comment" class="form-lable">Коментар</label>
+        <textarea
+          class="comment"
+          name="comment"
+          id="comment"
+          placeholder="Напишіть те, що ми повинні знати..."
+        ></textarea>
+      </div>
+      <div class="form-field">
+        <!-- <span class="text">Прикріпити фото автомобіля</span> -->
+      </div>
+      <button type="submit" class="button">Продати ласточку</button>
+    </form>
+  </div>
+</div>

@@ -118,7 +118,7 @@
 
 .icon-modal {
   position: absolute;
-  bottom: 11px;
+  bottom: 5px;
   left: 12px;
   display: inline-block;
   color: var(--title-text-color);
@@ -127,6 +127,11 @@
   .form-field input:focus ~ & {
     fill: var(--accent-color);
   }
+}
+
+.icon-modal .ce {
+  display: flex;
+  align-items: center;
 }
 
 .checkbox {
