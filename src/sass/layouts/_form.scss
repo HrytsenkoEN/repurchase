@@ -16,8 +16,13 @@
   }
 }
 
+a.button {
+  text-decoration: none;
+}
+
 .section-form {
   padding-left: 15px;
+  padding-right: 15px;
 }
 
 .container.form-list__bgd {
@@ -73,12 +78,17 @@
 //   }
 
 .form-list {
+  flex-direction: row;
+  list-style: none;
+  padding: 0;
+  @media screen and (min-width: 768px) {
     display: flex;
-    flex-direction: row;
-    list-style: none;
+    
+  }
   }
   
   .form-list__bgd {
+    padding: 0;
     background-image: url(/src/images/section-form-bgd.jpg);
   }
 //   .project-overlay {
