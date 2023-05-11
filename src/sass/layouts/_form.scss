@@ -21,8 +21,10 @@ a.button {
 }
 
 .section-form {
+  padding-top: 60px;
+  @media screen and (min-width: 1200px) {
   padding-left: 15px;
-  padding-right: 15px;
+  padding-right: 15px;}
 }
 
 .container.form-list__bgd {

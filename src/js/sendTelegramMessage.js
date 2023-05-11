@@ -1,10 +1,10 @@
 import { Notify } from 'notiflix';
 import axios from 'axios';
 const formEl = document.querySelector('.modal-form');
-const token = '6196909571:AAFOZjAec4WPyliZ5CIK6GSVnGy1XA06-dM';
-const chatId = '-980921121';
-// const token = '512482013:AAEMy-W7LTkZNmM95H0yVHKSSVq1Fvt76D8';
-// const chatId = '-972517118';
+// const token = '6196909571:AAFOZjAec4WPyliZ5CIK6GSVnGy1XA06-dM';
+// const chatId = '-980921121';
+const token = '512482013:AAEMy-W7LTkZNmM95H0yVHKSSVq1Fvt76D8';
+const chatId = '-972517118';
 const urlApi = `https://api.telegram.org/bot${token}/sendMessage`;
 // const formData = {};
 
